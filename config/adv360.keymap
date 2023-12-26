@@ -38,6 +38,14 @@
             bindings = <&sk LEFT_WIN &kp H>;
             label = "NEW_MACRO";
         };
+
+        XD: XD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LEFT_CONTROL &kp LEFT_WIN &kp O>;
+
+            label = "XD";
+        };
     };
 
     combos {
@@ -53,7 +61,7 @@
 &kp TAB    &kp Q        &kp W        &mt RA(E) E  &kp R      &kp T   &none                                                    &none      &kp Y        &kp U   &kp I      &mt RA(O) O  &kp P     &kp BSLH
 &kp ESC    &mt RA(A) A  &mt RA(S) S  &kp D        &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H        &kp J   &kp K      &mt RA(L) L  &kp SEMI  &kp SQT
 &kp LSHFT  &mt RA(Z) Z  &kp X        &mt RA(C) C  &kp V      &kp B                        &kp HOME      &kp PG_UP                        &mt RA(N) N  &kp M   &kp COMMA  &kp DOT      &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp A      &kp ENTER  &kp SPACE               &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
+&mo 2      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &XD        &kp ENTER  &kp SPACE               &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
             >;
         };
 
