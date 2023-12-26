@@ -42,7 +42,11 @@
         XD: XD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_CONTROL &kp LEFT_WIN &kp O>;
+            bindings =
+                <&macro_press>,
+                <&macro_tap>,
+                <&kp LEFT_CONTROL &kp LEFT_WIN &kp O>,
+                <&macro_release>;
 
             label = "XD";
         };
