@@ -70,7 +70,7 @@
         compatible = "zmk,combos";
 
         sticky.layer.4 {
-            bindings = <&sl 4>;
+            bindings = <&lt 4 F>;
             key-positions = <29 30 31 32 33>;
         };
     };
