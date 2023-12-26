@@ -42,13 +42,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        SpeachToText {
-            bindings = <&OnScreenKeyboard>;
-            key-positions = <41 32>;
-            timeout-ms = <1>;
-            require-prior-idle-ms = <1>;
-        };
     };
 
     keymap {
