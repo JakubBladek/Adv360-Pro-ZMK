@@ -57,10 +57,22 @@
             bindings = <&sk LEFT_WIN &kp LC(O)>;
             label = "XYZ";
         };
+
+        taskview: taskview {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_WIN &kp TAB>;
+            label = "TASKVIEW";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
+
+        sticky.layer.4 {
+            bindings = <&sl 4>;
+            key-positions = <29 30 31 32 33>;
+        };
     };
 
     keymap {
@@ -72,7 +84,7 @@
 &kp TAB    &kp Q        &kp W        &mt RA(E) E  &kp R      &kp T   &none                                                    &none      &kp Y        &kp U   &kp I      &mt RA(O) O  &kp P     &kp BSLH
 &kp ESC    &mt RA(A) A  &mt RA(S) S  &kp D        &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H        &kp J   &kp K      &mt RA(L) L  &kp SEMI  &kp SQT
 &kp LSHFT  &mt RA(Z) Z  &kp X        &mt RA(C) C  &kp V      &kp B                        &kp A         &kp PG_UP                        &mt RA(N) N  &kp M   &kp COMMA  &kp DOT      &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC  &kp DEL    &XD           &XYZ       &kp ENTER  &kp SPACE               &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
+&mo 4      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC  &kp DEL    &XD           &XYZ       &kp ENTER  &kp SPACE               &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
             >;
         };
 
@@ -108,11 +120,11 @@
 
         layer_Layer__4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &taskview  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
