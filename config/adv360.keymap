@@ -32,14 +32,14 @@
     };
 
     macros {
-        new_macro: new_macro {
+        SpeechToText: SpeechToText {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sk LEFT_WIN &kp H>;
-            label = "NEW_MACRO";
+            label = "SPEECHTOTEXT";
         };
 
-        XD: XD {
+        OnScreenKeyboard: OnScreenKeyboard {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -48,14 +48,7 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL &kp LEFT_WIN &kp O>;
 
-            label = "XD";
-        };
-
-        XYZ: XYZ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_WIN &kp LC(O)>;
-            label = "XYZ";
+            label = "ONSCREENKEYBOARD";
         };
 
         taskview: taskview {
@@ -64,14 +57,33 @@
             bindings = <&sk LEFT_WIN &kp TAB>;
             label = "TASKVIEW";
         };
+
+        Screenshot: Screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN &kp LEFT_SHIFT &kp S>,
+                <&macro_release>,
+                <&kp LEFT_WIN &kp LEFT_SHIFT &kp S>;
+
+            label = "SCREENSHOT";
+        };
+
+        ChangeLanguage: ChangeLanguage {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "CHANGELANGUAGE";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
         sticky.layer.4 {
-            bindings = <&kp A>;
-            key-positions = <33 32>;
+            bindings = <&SpeechToText>;
+            key-positions = <32 31>;
         };
     };
 
@@ -80,11 +92,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1       &kp N2       &kp N3       &kp N4     &kp N5  &tog 1                                                   &mo 3      &kp N6       &kp N7  &kp N8     &kp N9       &kp N0    &kp MINUS
-&kp TAB    &kp Q        &kp W        &mt RA(E) E  &kp R      &kp T   &none                                                    &none      &kp Y        &kp U   &kp I      &mt RA(O) O  &kp P     &kp BSLH
-&kp ESC    &mt RA(A) A  &mt RA(S) S  &kp D        &kp F      &kp G   &sl 4     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H        &kp J   &kp K      &mt RA(L) L  &kp SEMI  &kp SQT
-&kp LSHFT  &mt RA(Z) Z  &kp X        &mt RA(C) C  &kp V      &kp B                        &kp A         &kp PG_UP                        &mt RA(N) N  &kp M   &kp COMMA  &kp DOT      &kp FSLH  &kp RSHFT
-&mo 4      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC  &kp DEL    &XD           &XYZ       &kp ENTER  &kp SPACE               &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
+&kp EQUAL  &kp N1       &kp N2       &kp N3       &kp N4     &kp N5  &tog 1                                                               &mo 3            &kp N6       &kp N7  &kp N8     &kp N9       &kp N0    &kp MINUS
+&kp TAB    &kp Q        &kp W        &mt RA(E) E  &kp R      &kp T   &Screenshot                                                          &none            &kp Y        &kp U   &kp I      &mt RA(O) O  &kp P     &kp BSLH
+&kp ESC    &mt RA(A) A  &mt RA(S) S  &kp D        &kp F      &kp G   &sl 4        &kp LCTRL  &kp LALT               &kp LGUI   &kp RCTRL  &ChangeLanguage  &kp H        &kp J   &kp K      &mt RA(L) L  &kp SEMI  &kp SQT
+&kp LSHFT  &mt RA(Z) Z  &kp X        &mt RA(C) C  &kp V      &kp B                           &kp A                  &kp PG_UP                              &mt RA(N) N  &kp M   &kp COMMA  &kp DOT      &kp FSLH  &kp RSHFT
+&mo 4      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC     &kp DEL    &OnScreenKeyboard      &XYZ       &kp ENTER  &kp SPACE                     &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
             >;
         };
 
