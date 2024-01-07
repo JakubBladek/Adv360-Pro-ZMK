@@ -94,9 +94,9 @@
             bindings = <
 &kp EQUAL  &kp N1       &kp N2       &kp N3       &kp N4     &kp N5  &tog 1                                                               &mo 3            &kp N6       &kp N7  &kp N8     &kp N9       &kp N0    &kp MINUS
 &kp TAB    &kp Q        &kp W        &mt RA(E) E  &kp R      &kp T   &Screenshot                                                          &none            &kp Y        &kp U   &kp I      &mt RA(O) O  &kp P     &kp BSLH
-&kp ESC    &mt RA(A) A  &mt RA(S) S  &kp D        &kp F      &kp G   &mo 4        &kp LCTRL  &kp LALT               &kp LGUI   &kp RCTRL  &ChangeLanguage  &kp H        &kp J   &kp K      &mt RA(L) L  &kp SEMI  &kp SQT
+&kp ESC    &mt RA(A) A  &mt RA(S) S  &kp D        &kp F      &kp G   &lt 4 A      &kp LCTRL  &kp LALT               &kp LGUI   &kp RCTRL  &ChangeLanguage  &kp H        &kp J   &kp K      &mt RA(L) L  &kp SEMI  &kp SQT
 &kp LSHFT  &mt RA(Z) Z  &kp X        &mt RA(C) C  &kp V      &kp B                           &kp A                  &kp PG_UP                              &mt RA(N) N  &kp M   &kp COMMA  &kp DOT      &kp FSLH  &kp RSHFT
-&mo 4      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC     &kp DEL    &OnScreenKeyboard      &none      &kp ENTER  &kp SPACE                     &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
+&mo 4      &kp GRAVE    &kp CAPS     &kp LEFT     &kp RIGHT          &kp BSPC     &kp DEL    &OnScreenKeyboard      &mo 4      &kp ENTER  &kp SPACE                     &kp UP  &kp DOWN   &kp LBKT     &kp RBKT  &mo 2
             >;
         };
 
@@ -132,11 +132,11 @@
 
         layer_Layer__4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp A   &kp A   &kp A   &kp A   &kp A   &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &trans                                      &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &trans                                      &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &trans  &trans  &trans      &trans  &trans  &trans  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
+&trans  &trans           &trans           &trans           &trans           &trans                           &trans      &trans                  &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &trans           &trans           &trans           &trans                            &trans  &trans  &trans      &trans  &trans  &trans                   &trans           &trans           &trans           &trans           &trans
             >;
         };
 
