@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_BEHAVIOR_MATEUSZ";
             #binding-cells = <0>;
-            bindings = <&kp M>, <&kp A>, <&kp T>;
+            bindings = <&mt A C>, <&kp A>, <&kp T>;
         };
     };
 
